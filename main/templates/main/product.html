@@ -14,7 +14,7 @@
     <p class="description">{{product.description}}</p>
     <p class="stock">{{product.stock}} available in stock</p>
     {% if product.stock != 0 %}
-    <a href="{% url 'shoppingCart' %}"> <button>Add to Cart</button></a>
+    <a href="{% url 'addToCart' product.id %}"> <button>Add to Cart</button></a>
     {% else %}
     <p style="color: red; margin: auto" id="empty">Out of Stock</p>
     {% endif %}

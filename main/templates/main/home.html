@@ -33,7 +33,9 @@
 
         {% if product.stock != 0 %}
 
-        <a href="{% url 'shoppingCart' %}"> <button>Add to Cart</button></a>
+        <a href="{% url 'addToCart' product.id %}">
+          <button>Add to Cart</button></a
+        >
 
         {% else %}
         <p style="color: red; margin: auto; padding: 0px 14px" id="empty">

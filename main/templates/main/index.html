@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'main/style.css' %}" />
+    <title>Muhammad E-Commerce</title>
+  </head>
+  <body>
+    {% include 'main/includes/navbar.html' %} {% block content %}
+    <!-- Here will be our homepage, articles, profiles, etc...  -->
+    {% endblock %}
+
+    <footer>
+      <p>&copy; 2024 Muhammad's E-Commerce</p>
+    </footer>
+  </body>
+</html>

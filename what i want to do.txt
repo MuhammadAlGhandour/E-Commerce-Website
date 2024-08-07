@@ -1,0 +1,15 @@
+the website will have three sides
+    1- customer side (first thing)
+    2- seller side
+    3- admin side
+
+- the GUI:
+
+    1- homepage (showing some of the products and some sales)
+    2- search engine for specific products
+    3- products list
+
+
+
+we stopped after preparing the home and product pages
+still for shopping cart and checkout page

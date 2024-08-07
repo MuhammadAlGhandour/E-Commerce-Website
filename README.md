@@ -9,7 +9,7 @@ no one ask me about the Front-end cuz it's all made by ChatGPT i only did some c
 
 - no need to mention that python should be installed on your machine :)
 
-- do you see the file called "setup_env.bat"? _(works on windows)_
+- do you see the file called "setup*env.bat"? *(works on windows)\_
 
 - just run it and it will create a virtual environment and activate it
 

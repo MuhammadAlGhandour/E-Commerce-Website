@@ -1,0 +1,186 @@
+/* Products Section Styles */
+#products {
+  background-color: #eee;
+  padding-inline: 3rem;
+  border-radius: 10px;
+}
+
+#products h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.product-grid {
+  margin: 0px -100px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.product h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.product p {
+  font-size: 1.2rem;
+  color: #4caf50;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.product button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+  background-color: #45a049;
+}
+
+/* Product Details Page Styles */
+#product-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.product-image img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+  margin-left: 2rem;
+  text-align: left;
+}
+
+.product-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.product-info .price {
+  font-size: 1.5rem;
+  color: #4caf50;
+  margin-bottom: 1rem;
+}
+
+.product-info .description {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-info button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-info button:hover {
+  background-color: #45a049;
+}
+
+/* styles.css */
+
+/* General page styles */
+/* Add your existing styles here */
+
+/* Floating Cart Button Styles */
+.floating-cart {
+  position: fixed;
+  bottom: 80px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-cart:hover {
+  background-color: #45a049;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.floating-cart i {
+  pointer-events: none; /* Ensures the icon doesn't interfere with the link */
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the button */
+  left: 40%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.floating-cart:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}

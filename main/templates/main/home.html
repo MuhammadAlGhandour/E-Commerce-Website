@@ -1,0 +1,52 @@
+{% extends "main/index.html" %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static 'main/home_style.css' %}" />
+<!-- Add Font Awesome for icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+<!--start-->
+<section id="home">
+  <h2>Discover Our Amazing Products</h2>
+  <button id="shopNow">Shop Now</button>
+</section>
+
+<!-- a floating icon for the shopping cart -->
+<a href="{% url 'shoppingCart' %}" class="floating-cart">
+  <i class="fas fa-shopping-cart"></i>
+  <span class="tooltip-text">Shopping Cart</span>
+</a>
+
+<section id="products">
+  <h2>Featured Products</h2>
+  <!--here i'm gonna add the for loop-->
+  <div class="product-grid">
+    {% if products %} {% for product in products %}
+    <div class="product">
+      <img src="{% static 'main/productimg.jpg' %}" alt="Productimg" />
+      <h3>{{product.product_name}}</h3>
+      <p>${{product.price}}</p>
+      <div class="buttons">
+        <a id="details" href="{% url 'product' product.product_name %}">
+          <button>Show Details</button>
+        </a>
+
+        {% if product.stock != 0 %}
+
+        <a href="{% url 'shoppingCart' %}"> <button>Add to Cart</button></a>
+
+        {% else %}
+        <p style="color: red; margin: auto; padding: 0px 14px" id="empty">
+          Out of Stock
+        </p>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %} {% else %}
+    <h1>No available products on sale</h1>
+    {% endif %}
+  </div>
+</section>
+<!--end-->
+
+{% endblock content %}

@@ -14,7 +14,9 @@
     <p class="description">{{product.description}}</p>
     <p class="stock">{{product.stock}} available in stock</p>
     {% if product.stock != 0 %}
-    <a href="{% url 'addToCart' product.id %}"> <button>Add to Cart</button></a>
+    {% for message in messages %}
+    <a href="{% url 'addToCart' product.id %}"> <button onclick="alert('{{message}}')">Add to Cart</button></a>
+    {% endfor %}
     {% else %}
     <p style="color: red; margin: auto" id="empty">Out of Stock</p>
     {% endif %}
